@@ -17,7 +17,7 @@ You'll need following prerequisites before moving forward:
   cd /etc/
   ln -sfn ../run/systemd/resolve/resolv.conf
   ```
-  - Edit the netplan config at `/etc/netplan/00-installer-config.yaml` and add 127.0.0.1 before other nameservers.
+  - Edit the netplan config (mine was at `/etc/netplan/00-installer-config.yaml`) and add 127.0.0.1 before other nameservers.
   ```
   # This is the network config written by 'subiquity'
   network:
@@ -28,6 +28,7 @@ You'll need following prerequisites before moving forward:
           addresses: [127.0.0.1,8.8.8.8]
     version: 2
   ```
+  - Apply the updated network config using `sudo netplan apply`.
 
 ## Know issues and fixes
 
